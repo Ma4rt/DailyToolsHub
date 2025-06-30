@@ -7,3 +7,12 @@ services:
     preDeployCommand: |
       apt-get update && apt-get install -y ffmpeg
       pip install yt-dlp
+
+  - type: web
+    name: django-app
+    env: python
+    buildCommand: ""
+    startCommand: cd django_app && python manage.py runserver 0.0.0.0:10000
+    preDeployCommand: |
+      apt-get update && apt-get install -y ffmpeg
+      pip install yt-dlp
