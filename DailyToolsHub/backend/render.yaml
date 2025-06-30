@@ -6,6 +6,7 @@ services:
     startCommand: cd flask_app && python app.py
     preDeployCommand: |
       apt-get update && apt-get install -y ffmpeg
+      pip install -r requirements.txt
       pip install yt-dlp
 
   - type: web
