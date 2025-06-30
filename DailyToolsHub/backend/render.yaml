@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: flask-app
+    env: python
+    buildCommand: ""
+    startCommand: cd flask_app && python app.py
+    preDeployCommand: |
+      apt-get update && apt-get install -y ffmpeg
+      pip install yt-dlp
