@@ -1,0 +1,12 @@
+django
+flask
+requests
+PyPDF2
+python-docx
+reportlab
+Pillow
+moviepy
+pytube
+qrcode
+django-cors-headers
+flask-cors
