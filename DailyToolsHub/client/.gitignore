@@ -1,0 +1,11 @@
+# Sistema
+.DS_Store
+
+# Dependências
+/node_modules/
+
+# React Router
+/.react-router/
+
+# Build de produção
+/build/

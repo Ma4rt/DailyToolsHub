@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html,
+body {
+  @apply bg-white dark:bg-gray-950;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
+/* Estilos para campos de input */
+input, textarea, select {
+  @apply text-gray-900 bg-white border-gray-300;
+  color: #111827 !important;
+  background-color: #ffffff !important;
+}
+
+input::placeholder, textarea::placeholder {
+  @apply text-gray-500;
+  color: #6b7280 !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  @apply text-gray-900 bg-white;
+  color: #111827 !important;
+  background-color: #ffffff !important;
+}
+
+/* Garantir que os campos tenham contraste adequado */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+  color: #111827 !important;
+  background-color: #ffffff !important;
+}
+
+/* Estilos para dark mode se necessário */
+@media (prefers-color-scheme: dark) {
+  input, textarea, select {
+    @apply text-gray-100 bg-gray-800 border-gray-600;
+    color: #f3f4f6 !important;
+    background-color: #1f2937 !important;
+  }
+  
+  input::placeholder, textarea::placeholder {
+    @apply text-gray-400;
+    color: #9ca3af !important;
+  }
+}
